@@ -1,0 +1,7 @@
+---
+  
+potions: 2
+hero_life: 20
+dragon_life: 30
+whose_turn: true
+action_hero: nil

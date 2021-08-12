@@ -1,0 +1,11 @@
+<%= form_with model: [@post, @comment] do |f| %>
+  <div class="mb-4 row">
+    <%= f.label :comment, class: 'col-sm-2 col-form-label' %>
+
+    <div class="col-sm-10">
+      <%= f.text_area :body, required: true, minlength: 2, class: 'form-control'%>
+    </div>
+  </div>
+  <%= f.submit "Submit post!", class: 'btn btn-primary' %>
+
+<% end %>

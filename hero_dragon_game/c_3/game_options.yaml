@@ -1,0 +1,9 @@
+---
+  
+max_potions: 2
+max_hero_life: 20
+max_dragon_life: 30
+min_dragon_dmg: 0
+max_dragon_dmg: 9
+min_player_dmg: 1
+max_player_dmg: 7

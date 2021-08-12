@@ -1,0 +1,7 @@
+<article class="mb-3" id="comment-<%= comment.id %>">
+  <%= comment.created_at %>
+  <p><%= comment.body %></p>
+  <%= link_to "Edit", edit_post_comment_path(post, comment), class: "btn btn-info btn-sm" %>
+  <%= link_to "Delete", post_comment_path(post, comment), class: "btn btn-danger btn-sm",
+              data: {method: :delete, confirm: 'Are you sure?'}%>
+</article>

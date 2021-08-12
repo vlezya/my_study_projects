@@ -1,0 +1,28 @@
+<% provide :page_title, "Posts" %>
+<% currently_at 'Posts' %>
+
+<div class="mb-4 text-center">
+  <%= link_to 'Create new post', new_post_path, class: 'btn btn-success btn-lg mt-4' %>
+</div>
+<% @posts.each do |post| %>
+  <div class="container">
+    <article class="card mt-3 alert alert-light border border-5" >
+      <div class="card-body">
+        <h2><%= post.title %></h2>
+
+        <section class="card-text">
+            <small><%= post.created_at %></small>
+            <p class="my-2">
+              <%= strip_tags post.body %>
+            </p>
+          </section>
+
+          <%= link_to 'Show', post_path(post), class: 'btn btn-info' %>
+          <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-warning' %>
+          <%= link_to 'Destroy', post_path(post), class: 'btn btn-danger',
+                      data: {method: :delete, confirm: 'Are you sure?'} %>
+      </div>
+    </article>
+  </div>
+<% end %>
+
